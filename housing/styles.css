@@ -263,6 +263,15 @@ input:focus-visible {
   padding: 1rem;
 }
 
+.fact-source {
+  color: var(--muted);
+  font-size: 0.88rem;
+}
+
+.fact-source a {
+  color: inherit;
+}
+
 .table-wrap {
   overflow-x: auto;
 }
