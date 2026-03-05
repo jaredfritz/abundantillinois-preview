@@ -580,6 +580,13 @@ input {
   border-radius: 10px;
   background: #fff;
   padding: 0.8rem;
+  transition: transform 160ms ease, box-shadow 180ms ease, border-color 180ms ease;
+}
+
+.bills-grid article:hover {
+  transform: translateY(-2px);
+  border-color: #b5c4d8;
+  box-shadow: 0 12px 24px rgba(0, 33, 71, 0.08);
 }
 
 .bills-grid h3 {
