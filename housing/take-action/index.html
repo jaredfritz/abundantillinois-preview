@@ -1,0 +1,164 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Take Action | Illinois BUILD Plan</title>
+    <meta
+      name="description"
+      content="Take action in support of Illinois BUILD Plan housing affordability reforms: contact your legislator and sign the coalition letter."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="icon" type="image/png" href="/abundantil%20fav.png" />
+    <link rel="stylesheet" href="../styles.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="site-header">
+      <div class="wrap header-row">
+        <a class="brand" href="/" aria-label="Abundant Illinois home">
+          <img class="brand-logo" src="/abundantil%20logo.png" alt="Abundant Illinois" />
+        </a>
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Open navigation menu">
+          <span class="menu-icon" aria-hidden="true">☰</span>
+        </button>
+        <nav class="site-nav" id="site-nav" aria-label="Primary">
+          <a href="/housing/#overview">Overview</a>
+          <a href="/housing/#facts">Fact Sheet</a>
+          <a href="/housing/#letter">Letter</a>
+          <a href="/housing/#supporters">Supporters</a>
+          <a href="/housing/#myths">Myths</a>
+          <a href="/housing/#resources">Resources</a>
+          <a href="/housing/take-action/">Take Action</a>
+        </nav>
+      </div>
+    </header>
+
+    <main id="main">
+      <section class="hero" id="overview">
+        <div class="wrap action-hero">
+          <p class="eyebrow">Take Action</p>
+          <h1>Support the Illinois BUILD Plan</h1>
+          <p class="lead">
+            Use the links below to contact your legislators and add your support as an individual or on behalf of your organization.
+          </p>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="wrap action-grid-two">
+          <article class="fact-card action-card-clean">
+            <h2>Sign The Letter</h2>
+            <p>
+              Add your support for BUILD as an individual or as an organization, and join the coalition backing enactment this session.
+            </p>
+            <div class="hero-actions">
+              <button class="btn btn-primary" type="button" data-open-join data-sign-type="organization">Sign as Organization</button>
+              <button class="btn btn-soft" type="button" data-open-join data-sign-type="individual">Sign as Individual</button>
+              <a class="btn btn-soft" href="/housing/#letter">Read The Letter</a>
+            </div>
+          </article>
+
+          <article class="fact-card action-card-clean contact-card">
+            <div class="contact-split">
+              <section class="contact-pane">
+                <h2>Contact Your Legislator</h2>
+                <p>
+                  Ask your Senator and Representative to support BUILD legislation that strengthens housing affordability and abundance.
+                </p>
+                <a class="btn btn-primary" href="https://experience.arcgis.com/experience/b62f98ad44314d18ade2545833aa498a/" target="_blank" rel="noopener noreferrer">Find My Legislator</a>
+              </section>
+              <section class="contact-pane script-pane">
+                <h2>Sample Script</h2>
+                <p class="script-note">
+                  "Hello, my name is [Name], and I live in [City]. I am asking [Legislator] to support BUILD housing reforms that increase housing supply across Illinois, including missing-middle housing and ADU pathways. Please prioritize practical policies that improve affordability and implementation clarity this session."
+                </p>
+              </section>
+            </div>
+          </article>
+
+          <article class="fact-card action-card-clean">
+            <h2>Key BUILD Bills</h2>
+            <p>Core legislation in the BUILD package focuses on these statewide reform tracks:</p>
+            <div class="bills-grid">
+              <article>
+                <h3>Missing-Middle Housing</h3>
+                <p>Allows more duplexes, triplexes, and fourplexes in areas limited to single-unit zoning.</p>
+              </article>
+              <article>
+                <h3>Accessory Dwelling Units (ADUs)</h3>
+                <p>Expands legal pathways for backyard cottages, basement apartments, and coach houses.</p>
+              </article>
+              <article>
+                <h3>Parking and Lot Standards</h3>
+                <p>Reduces minimum parking and lot-size barriers that increase housing costs and delay projects.</p>
+              </article>
+              <article>
+                <h3>Process and Permitting Clarity</h3>
+                <p>Improves predictability for approvals and implementation timelines across municipalities.</p>
+              </article>
+            </div>
+            <p class="note">Bill numbers and hearing dates will be posted here as the package moves through committee.</p>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <div class="modal-backdrop" id="join-modal" aria-hidden="true">
+      <div class="modal" role="dialog" aria-modal="true" aria-labelledby="join-modal-title">
+        <button class="modal-close" type="button" data-close-join aria-label="Close">×</button>
+        <h2 id="join-modal-title">Join The Coalition</h2>
+        <p class="section-intro">Sign in support of the Illinois BUILD Plan as an organization or an individual.</p>
+
+        <form id="join-form">
+          <fieldset>
+            <legend>Sign as</legend>
+            <label><input type="radio" name="support_type" value="organization" checked /> Organization</label>
+            <label><input type="radio" name="support_type" value="individual" /> Individual</label>
+          </fieldset>
+
+          <label>
+            Name
+            <input required name="name" type="text" />
+          </label>
+
+          <label class="org-only">
+            Organization Name
+            <input name="organization" type="text" />
+          </label>
+
+          <label>
+            Email
+            <input required name="email" type="email" />
+          </label>
+
+          <label>
+            City / Region
+            <input name="region" type="text" />
+          </label>
+
+          <label class="org-only">
+            Website
+            <input name="website" type="url" placeholder="https://" />
+          </label>
+
+          <button class="btn btn-primary" type="submit">Submit Sign-On</button>
+          <p class="note" id="join-note">Submit once and we will follow up with next steps.</p>
+          <p class="note">Questions about joining the coalition? Email <a href="mailto:abundantillinois@gmail.com">abundantillinois@gmail.com</a>.</p>
+        </form>
+      </div>
+    </div>
+
+    <footer class="site-footer">
+      <div class="wrap foot-row">
+        <p>Abundant Illinois</p>
+        <p>Nonpartisan policy guidance and coalition advocacy for housing abundance</p>
+      </div>
+    </footer>
+
+    <script src="../script.js"></script>
+  </body>
+</html>
