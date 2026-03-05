@@ -8,6 +8,23 @@
       name="description"
       content="Abundant Illinois provides nonpartisan policy guidance and coalition advocacy for housing affordability and abundance."
     />
+    <script>
+      (function () {
+        if (window.location.hostname !== "preview.abundantillinois.org") return;
+        if (window.sessionStorage.getItem("ai_preview_auth") === "1") return;
+
+        const value = window.prompt("Enter preview password");
+        if (value === "testtest") {
+          window.sessionStorage.setItem("ai_preview_auth", "1");
+          return;
+        }
+
+        document.documentElement.innerHTML =
+          "<head><meta charset='utf-8'><title>Preview Protected</title></head>" +
+          "<body style='font-family: system-ui, sans-serif; padding: 2rem; color: #002147;'>Access denied.</body>";
+        throw new Error("Preview auth failed");
+      })();
+    </script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />

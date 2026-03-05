@@ -773,3 +773,30 @@ input {
   color: var(--color-primary);
   font-weight: 600;
 }
+
+
+.brand-housing {
+  text-transform: none;
+  letter-spacing: 0.06em;
+}
+
+.brand-wordmark {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 0.35rem;
+  font-size: 0.98rem;
+}
+
+.brand-wordmark strong {
+  font-weight: 700;
+}
+
+.brand-wordmark span {
+  font-weight: 500;
+}
+
+@media (max-width: 980px) {
+  .brand-wordmark {
+    display: none;
+  }
+}
