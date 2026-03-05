@@ -183,8 +183,10 @@ p {
 
 .foot-row {
   display: flex;
-  justify-content: space-between;
-  gap: 1rem;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 0;
   padding: 1rem 0 1.4rem;
   color: var(--muted);
   font-size: 0.86rem;
