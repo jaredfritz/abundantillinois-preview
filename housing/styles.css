@@ -380,16 +380,6 @@ input {
   margin-bottom: 0.35rem;
 }
 
-.resource-grid h3 a {
-  color: var(--color-primary);
-  text-decoration-color: #aec7ef;
-  text-decoration-thickness: 2px;
-}
-
-.resource-grid p {
-  margin: 0;
-  color: var(--muted);
-}
 
 .site-footer {
   border-top: 1px solid var(--color-border);
@@ -813,4 +803,64 @@ input {
   .brand-logo {
     height: 32px;
   }
+}
+
+
+/* Modest interactive hovers for key advocacy sections */
+#facts .fact-card,
+#myths .fact-card,
+#supporters .supporter-grid span {
+  transition: transform 160ms ease, box-shadow 180ms ease, border-color 180ms ease;
+}
+
+#facts .fact-card:hover,
+#myths .fact-card:hover,
+#supporters .supporter-grid span:hover {
+  transform: translateY(-2px);
+  border-color: #b5c4d8;
+  box-shadow: 0 12px 24px rgba(0, 33, 71, 0.08);
+}
+
+#supporters .supporter-join-pill {
+  transition: transform 160ms ease, box-shadow 180ms ease, opacity 140ms ease;
+}
+
+#supporters .supporter-join-pill:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 10px 20px rgba(0, 33, 71, 0.16);
+}
+
+.resource-card-link {
+  display: block;
+  background: var(--surface);
+  border: 1px solid var(--color-border);
+  border-radius: 12px;
+  box-shadow: 0 8px 22px rgba(0, 33, 71, 0.04);
+  padding: 1rem;
+  text-decoration: none;
+  color: inherit;
+  transition: transform 160ms ease, box-shadow 180ms ease, border-color 180ms ease;
+}
+
+.resource-card-link:hover {
+  transform: translateY(-2px);
+  border-color: #b5c4d8;
+  box-shadow: 0 12px 24px rgba(0, 33, 71, 0.09);
+}
+
+.resource-card-link:focus-visible {
+  outline: 3px solid #9abef1;
+  outline-offset: 2px;
+}
+
+.resource-card-link h3 {
+  margin-bottom: 0.35rem;
+  color: var(--color-primary);
+  text-decoration-color: #aec7ef;
+  text-decoration-thickness: 2px;
+}
+
+.resource-card-link p {
+  margin: 0;
+  color: var(--muted);
 }
