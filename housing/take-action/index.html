@@ -11,13 +11,17 @@
     <script>
       (function () {
         if (window.sessionStorage.getItem("ai_preview_auth") === "1") return;
+        document.documentElement.style.display = "none";
 
         const value = window.prompt("Enter site password");
         if (value === "build2026") {
           window.sessionStorage.setItem("ai_preview_auth", "1");
+          document.documentElement.style.display = "";
           return;
         }
 
+        window.sessionStorage.removeItem("ai_preview_auth");
+        window.stop();
         document.open();
         document.write(
           "<!doctype html><html><head><meta charset='utf-8'><meta name='viewport' content='width=device-width, initial-scale=1'><title>Access Denied</title></head>" +
@@ -26,7 +30,6 @@
             "</body></html>"
         );
         document.close();
-        throw new Error("Site auth failed");
       })();
     </script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
