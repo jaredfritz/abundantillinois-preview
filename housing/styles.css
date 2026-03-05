@@ -590,8 +590,8 @@ input {
   padding: 0.8rem;
 }
 
-.bills-grid .bill-track {
-  margin-bottom: 0.2rem;
+.bills-grid h3 {
+  margin: 0 0 0.2rem;
 }
 
 .bills-grid .bill-name {
