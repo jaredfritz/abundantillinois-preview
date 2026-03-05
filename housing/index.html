@@ -10,10 +10,9 @@
     />
     <script>
       (function () {
-        if (window.location.hostname !== "preview.abundantillinois.org") return;
         if (window.sessionStorage.getItem("ai_preview_auth") === "1") return;
 
-        const value = window.prompt("Enter preview password");
+        const value = window.prompt("Enter site password");
         if (value === "testtest") {
           window.sessionStorage.setItem("ai_preview_auth", "1");
           return;
@@ -169,17 +168,11 @@
         <div class="wrap">
           <h2>Coalition Supporters</h2>
           <div class="supporter-grid">
-            <span>Abundant Housing Illinois</span>
-            <span>CUrbanism Club</span>
-            <span>Elevated Chicago</span>
-            <span>Housing Action Illinois</span>
-            <span>Illinois Housing Council</span>
-            <span>Illinois REALTORS</span>
-            <span>Impact for Equity</span>
-            <span>Metropolitan Planning Council</span>
-            <span>Strong Towns BloNo</span>
-            <span>Strong Towns Chicago</span>
-            <span>YIMBY Illinois</span>
+            <span>[Housing Industry]</span>
+            <span>[Realtor Association]</span>
+            <span>[Equity Group]</span>
+            <span>[Regional Urbanist]</span>
+            <span>[Transit Advocate]</span>
             <button class="supporter-join-pill" type="button" data-open-join data-sign-type="organization">Join The Coalition</button>
           </div>
           <blockquote class="supporter-quote">

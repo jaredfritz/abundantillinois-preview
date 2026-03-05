@@ -10,10 +10,9 @@
     />
     <script>
       (function () {
-        if (window.location.hostname !== "preview.abundantillinois.org") return;
         if (window.sessionStorage.getItem("ai_preview_auth") === "1") return;
 
-        const value = window.prompt("Enter preview password");
+        const value = window.prompt("Enter site password");
         if (value === "testtest") {
           window.sessionStorage.setItem("ai_preview_auth", "1");
           return;
