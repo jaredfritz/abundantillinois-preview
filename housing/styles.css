@@ -590,17 +590,22 @@ input {
   padding: 0.8rem;
 }
 
-.bills-grid h3 {
-  margin-bottom: 0.45rem;
+.bills-grid .bill-track {
+  margin-bottom: 0.2rem;
 }
 
-.bills-grid h3 a {
+.bills-grid .bill-name {
+  margin-bottom: 0.45rem;
+  font-weight: 400;
+}
+
+.bills-grid .bill-name a {
   color: inherit;
   text-decoration: none;
 }
 
-.bills-grid h3 a:hover,
-.bills-grid h3 a:focus-visible {
+.bills-grid .bill-name a:hover,
+.bills-grid .bill-name a:focus-visible {
   text-decoration: underline;
 }
 
