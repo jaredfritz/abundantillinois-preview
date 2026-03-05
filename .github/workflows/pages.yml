@@ -1,4 +1,5 @@
 name: Deploy static site to Pages
+# No-op metadata update to retrigger preview workflow registration.
 
 on:
   push:
