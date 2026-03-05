@@ -10,26 +10,37 @@
     />
     <script>
       (function () {
-        if (window.sessionStorage.getItem("ai_preview_auth") === "1") return;
-        document.documentElement.style.display = "none";
+        const key = "ai_preview_auth";
+        if (window.sessionStorage.getItem(key) === "1") return;
 
-        const value = window.prompt("Enter site password");
-        if (value === "build2026") {
-          window.sessionStorage.setItem("ai_preview_auth", "1");
-          document.documentElement.style.display = "";
-          return;
-        }
+        const style = document.createElement("style");
+        style.textContent =
+          "body{visibility:hidden!important;}#ai-auth-overlay{position:fixed;inset:0;display:grid;place-items:center;background:#f6f9fc;color:#002147;font-family:system-ui,sans-serif;z-index:2147483647;}#ai-auth-card{width:min(92vw,360px);padding:1rem 1.1rem;border:1px solid #c8d6e6;border-radius:12px;background:#fff;box-shadow:0 12px 24px rgba(0,33,71,.08)}#ai-auth-card h1{margin:0 0 .65rem;font-size:1.05rem}#ai-auth-card p{margin:0 0 .8rem;color:#3b5676;font-size:.92rem}#ai-auth-card input{width:100%;padding:.55rem .65rem;border:1px solid #b9cadd;border-radius:8px;font:inherit;box-sizing:border-box}#ai-auth-card button{margin-top:.65rem;width:100%;padding:.55rem .65rem;border:0;border-radius:8px;background:#002147;color:#fff;font:inherit;cursor:pointer}#ai-auth-error{margin-top:.55rem;color:#8a1e1e;font-size:.85rem;min-height:1.1em}";
+        document.head.appendChild(style);
 
-        window.sessionStorage.removeItem("ai_preview_auth");
-        window.stop();
-        document.open();
-        document.write(
-          "<!doctype html><html><head><meta charset='utf-8'><meta name='viewport' content='width=device-width, initial-scale=1'><title>Access Denied</title></head>" +
-            "<body style='margin:0;min-height:100vh;display:grid;place-items:center;background:#f6f9fc;color:#002147;font-family:system-ui,sans-serif;'>" +
-            "<div style='text-align:center;padding:2rem;'><h1 style='margin:0 0 .5rem;font-size:1.4rem;'>Access denied</h1><p style='margin:0;color:#3b5676;'>Incorrect password.</p></div>" +
-            "</body></html>"
-        );
-        document.close();
+        const overlay = document.createElement("div");
+        overlay.id = "ai-auth-overlay";
+        overlay.innerHTML =
+          '<form id="ai-auth-card"><h1>Site protected</h1><p>Enter site password to continue.</p><input id="ai-auth-input" type="password" autocomplete="current-password" placeholder="Password" /><button type="submit">Enter</button><div id="ai-auth-error" aria-live="polite"></div></form>';
+        document.documentElement.appendChild(overlay);
+
+        const form = overlay.querySelector("#ai-auth-card");
+        const input = overlay.querySelector("#ai-auth-input");
+        const error = overlay.querySelector("#ai-auth-error");
+        input.focus();
+
+        form.addEventListener("submit", function (event) {
+          event.preventDefault();
+          if (input.value === "build2026") {
+            window.sessionStorage.setItem(key, "1");
+            overlay.remove();
+            style.remove();
+            return;
+          }
+          window.sessionStorage.removeItem(key);
+          error.textContent = "Incorrect password.";
+          input.select();
+        });
       })();
     </script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
